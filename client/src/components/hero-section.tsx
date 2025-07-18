@@ -35,13 +35,17 @@ export default function HeroSection() {
             IQVest empowers you with exclusive indicators, risk metrics, and AI-driven insights to stay ahead of the crypto market.
           </p>
           <div className="flex flex-col items-center gap-6 mb-12">
-            <Button
-              size="lg"
-              className="btn-modern px-8 py-4 rounded-xl text-white font-semibold text-lg"
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Get Early Access
-            </Button>
+            <div className="relative">
+              <Button
+                size="lg"
+                className="btn-modern px-8 py-4 rounded-xl text-white font-semibold text-lg"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Get Early Access
+              </Button>
+              {/* Light effect under button */}
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl"></div>
+            </div>
             {/* Trustpilot Stars */}
             <div className="flex items-center space-x-2" role="img" aria-label="4 out of 5 stars rating">
               <div className="flex">
@@ -61,14 +65,16 @@ export default function HeroSection() {
 
         {/* Centered Platform Image - Full Width */}
         <div className="relative w-full max-w-7xl mx-auto">
-          {/* Bright glow effect behind the image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 blur-3xl transform scale-110 -z-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-2xl transform scale-105 -z-10"></div>
+          {/* Enhanced bright glow effect behind the image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/50 to-pink-500/50 blur-3xl transform scale-110 -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 to-purple-500/40 blur-2xl transform scale-105 -z-10"></div>
+          {/* Additional glow under the image */}
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-3/4 h-16 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-purple-500/30 rounded-full blur-2xl -z-10"></div>
           
           <img
             src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=1000"
             alt="IQVest AI Trading Dashboard"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-2xl"
             loading="eager"
             width="1600"
             height="1000"

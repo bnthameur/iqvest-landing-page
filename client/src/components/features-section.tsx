@@ -1,6 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import GlassmorphismCard from "@/components/glassmorphism-card";
-import { Brain, TrendingUp, BarChart3, Link, Users, MessageCircle } from "lucide-react";
+import SmartfolioScroll from "@/components/smartfolio-scroll";
+import { Brain, TrendingUp, BarChart3, Link, Users, MessageCircle, Wallet } from "lucide-react";
 
 const features = [
   {
@@ -38,6 +39,12 @@ const features = [
     title: "IQVest Community",
     description: "Collaborate and chat with the community to discuss trading/investing strategies.",
     delay: "0.5s"
+  },
+  {
+    icon: Wallet,
+    title: "Smartfolio Multi-Chain",
+    description: "Advanced portfolio management supporting 100+ blockchains and thousands of cryptocurrencies across all major networks.",
+    delay: "0.6s"
   }
 ];
 
@@ -58,7 +65,7 @@ export default function FeaturesSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <GlassmorphismCard
               key={index}
@@ -72,6 +79,11 @@ export default function FeaturesSection() {
               <p className="text-muted-foreground">{feature.description}</p>
             </GlassmorphismCard>
           ))}
+        </div>
+
+        {/* Smartfolio Multi-Chain Support Showcase */}
+        <div className={`reveal ${isVisible ? 'active' : ''}`} style={{ animationDelay: "0.7s" }}>
+          <SmartfolioScroll />
         </div>
       </div>
     </section>

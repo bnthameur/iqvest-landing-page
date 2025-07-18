@@ -46,8 +46,9 @@ Preferred communication style: Simple, everyday language.
 
 ### Frontend Components
 - **Navigation**: Floating glassmorphism navigation with centered positioning and logo integration
-- **Hero Section**: Centered layout with background lighting effects and prominent wider platform image
-- **Features Section**: Grid layout showcasing AI capabilities with icons from Lucide
+- **Hero Section**: Centered layout with background lighting effects, prominent wider platform image with rounded corners, and glowing button effect
+- **Features Section**: Grid layout showcasing AI capabilities with icons from Lucide, plus Smartfolio multi-chain support
+- **Smartfolio Scroll**: Infinite scrolling showcase of 100+ supported blockchains and cryptocurrencies
 - **Trustpilot Section**: 4.9/5 rating display with breakdown bars
 - **Testimonials**: Grid of user reviews with avatars and ratings
 - **Pricing Section**: Tiered pricing plans with feature comparison
