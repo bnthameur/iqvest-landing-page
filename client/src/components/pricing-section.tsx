@@ -178,7 +178,7 @@ export default function PricingSection() {
               <Button
                 className={`w-full py-3 rounded-xl font-semibold ${
                   plan.buttonVariant === "default"
-                    ? "btn-gradient"
+                    ? "btn-modern"
                     : "glass-card hover:bg-white/10 border-white/20"
                 }`}
                 variant={plan.buttonVariant}

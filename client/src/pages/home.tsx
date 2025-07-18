@@ -5,7 +5,6 @@ import TrustpilotSection from "@/components/trustpilot-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import PricingSection from "@/components/pricing-section";
 import FAQSection from "@/components/faq-section";
-import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <TestimonialsSection />
       <PricingSection />
       <FAQSection />
-      <CTASection />
       <Footer />
     </div>
   );

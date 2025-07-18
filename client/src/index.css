@@ -45,8 +45,24 @@
   body {
     @apply antialiased text-foreground;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, var(--navy-purple) 0%, var(--deep-violet) 100%);
+    background: var(--navy-purple);
     min-height: 100vh;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(139, 66, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 82, 229, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(139, 66, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 60% 40%, rgba(255, 82, 229, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -68,7 +84,7 @@
 
   .glass-card:hover {
     border-color: var(--glass-hover-border);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   .gradient-text {
@@ -79,14 +95,17 @@
     color: transparent;
   }
 
-  .btn-gradient {
-    background: linear-gradient(135deg, var(--neon-lilac), var(--hot-magenta));
-    transition: all 0.2s ease-in-out;
+  .btn-modern {
+    background: linear-gradient(135deg, hsl(260, 95%, 55%), hsl(270, 85%, 60%));
+    border: 1px solid rgba(139, 66, 255, 0.3);
+    transition: all 0.3s ease;
   }
 
-  .btn-gradient:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(139, 66, 255, 0.6);
+  .btn-modern:hover {
+    background: linear-gradient(135deg, hsl(260, 95%, 60%), hsl(270, 85%, 65%));
+    border-color: rgba(139, 66, 255, 0.6);
+    box-shadow: 0 4px 20px rgba(139, 66, 255, 0.25);
+    transform: translateY(-1px);
   }
 
   .reveal {

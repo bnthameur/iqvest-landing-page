@@ -2,7 +2,7 @@
 
 ## Overview
 
-IQVest is a modern full-stack web application that provides AI-driven insights, risk metrics, and analytics for cryptocurrency trading. The platform features a landing page with sections for features, testimonials, pricing, and FAQ, built with a focus on user engagement and conversion.
+IQVest is a modern full-stack web application that provides AI-driven insights, risk metrics, and analytics for cryptocurrency trading. The platform features a high-performance landing page with advanced parallax effects, floating navigation, and optimized for 90+ Lighthouse scores. Built with a focus on user engagement and conversion using a deep purple dark theme with subtle lighting effects.
 
 ## User Preferences
 
@@ -33,24 +33,25 @@ Preferred communication style: Simple, everyday language.
    - `server/` - Backend Express API
    - `shared/` - Shared schemas and types
 
-2. **Design System**: Deep purple dark mode theme with glassmorphism effects:
-   - Background gradient from navy-purple to deep violet
+2. **Design System**: Ultra-dark purple theme with subtle lighting effects:
+   - Background: Deep purple (#0B031A) with radial gradient light spots
    - Primary accent: neon lilac (#8B42FF)
-   - Secondary accent: hot magenta (#FF52E5)
-   - Glass cards with backdrop blur effects
+   - Secondary accent: hot magenta (#FF52E5)  
+   - Glass cards with backdrop blur effects and subtle borders
+   - Modern button styling with gentle hover effects
 
 3. **Typography**: Inter font family with Source Code Pro for monospace text
 
 ## Key Components
 
 ### Frontend Components
-- **Navigation**: Fixed glassmorphism navigation with smooth scrolling
-- **Hero Section**: Animated landing section with gradient text and floating elements
+- **Navigation**: Floating glassmorphism navigation with centered positioning
+- **Hero Section**: Parallax hero with scrolling background image and 4-star rating display
 - **Features Section**: Grid layout showcasing AI capabilities with icons from Lucide
-- **Testimonials**: Carousel of user reviews with avatars and ratings
+- **Trustpilot Section**: 4.9/5 rating display with breakdown bars
+- **Testimonials**: Grid of user reviews with avatars and ratings
 - **Pricing Section**: Tiered pricing plans with feature comparison
 - **FAQ Section**: Accordion-style frequently asked questions
-- **CTA Section**: Email capture form with toast notifications
 
 ### Backend Components
 - **Storage Interface**: Abstracted storage layer supporting both memory and database storage

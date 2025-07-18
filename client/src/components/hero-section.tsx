@@ -1,16 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Play } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }}></div>
+    <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+      {/* Hero Dashboard with Parallax */}
+      <div 
+        className="absolute inset-0 overflow-hidden"
+        style={{
+          transform: `translateY(${scrollY * 0.5}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+          alt="IQVest AI Trading Dashboard"
+          className="w-full h-full object-cover opacity-20"
+          loading="eager"
+        />
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,37 +42,31 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
             IQVest empowers you with exclusive indicators, risk metrics, and AI-driven insights to stay ahead of the crypto market.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col items-center gap-6 justify-center mb-16">
             <Button
               size="lg"
-              className="btn-gradient px-8 py-4 rounded-xl text-white font-semibold text-lg"
+              className="btn-modern px-8 py-4 rounded-xl text-white font-semibold text-lg"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get Early Access
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="glass-card px-8 py-4 rounded-xl text-white font-semibold text-lg hover:bg-white/10 border-white/20"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
-            </Button>
+            {/* Trustpilot Stars */}
+            <div className="flex items-center space-x-2">
+              <div className="flex">
+                {[...Array(4)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+                <svg className="w-4 h-4 text-gray-400 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <span className="text-sm text-muted-foreground">4.9/5 from 74 reviews</span>
+            </div>
           </div>
         </div>
-        
-        {/* Hero Dashboard Mockup */}
-        <div className={`reveal ${isVisible ? 'active' : ''}`} style={{ animationDelay: '0.2s' }}>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-              alt="IQVest AI Trading Dashboard"
-              className="rounded-2xl shadow-2xl mx-auto animate-glow max-w-full h-auto"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
