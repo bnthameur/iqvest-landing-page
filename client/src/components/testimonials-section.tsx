@@ -71,9 +71,11 @@ export default function TestimonialsSection() {
               <div className="flex items-center mb-6">
                 <img
                   src={testimonial.avatar}
-                  alt={testimonial.name}
+                  alt={`${testimonial.name}, ${testimonial.role}`}
                   className="w-12 h-12 rounded-full mr-4"
                   loading="lazy"
+                  width="48"
+                  height="48"
                 />
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
@@ -81,9 +83,9 @@ export default function TestimonialsSection() {
                 </div>
               </div>
               <p className="text-muted-foreground italic mb-4">"{testimonial.content}"</p>
-              <div className="flex text-yellow-400">
+              <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
+                  <Star key={i} className="w-4 h-4 fill-current" aria-hidden="true" />
                 ))}
               </div>
             </GlassmorphismCard>

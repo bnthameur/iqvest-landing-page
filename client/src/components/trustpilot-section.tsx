@@ -33,9 +33,9 @@ export default function TrustpilotSection() {
               <div className="text-green-400 font-semibold text-lg mb-4">Excellent</div>
               
               {/* 5 Star Rating */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-4" role="img" aria-label="5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-green-400 text-green-400 mx-1" />
+                  <Star key={i} className="w-6 h-6 fill-green-400 text-green-400 mx-1" aria-hidden="true" />
                 ))}
               </div>
               

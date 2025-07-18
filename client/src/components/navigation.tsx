@@ -22,28 +22,32 @@ export default function Navigation() {
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-8" role="navigation" aria-label="Main navigation">
               <button
                 onClick={() => scrollToSection("features")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                aria-label="Navigate to Features section"
               >
                 Features
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                aria-label="Navigate to Reviews section"
               >
                 Reviews
               </button>
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                aria-label="Navigate to Pricing section"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                aria-label="Navigate to FAQ section"
               >
                 FAQ
               </button>
@@ -69,6 +73,8 @@ export default function Navigation() {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-muted-foreground hover:text-foreground"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
