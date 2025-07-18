@@ -59,16 +59,16 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Centered Platform Image */}
-        <div className="relative max-w-4xl mx-auto">
+        {/* Centered Platform Image - Wider */}
+        <div className="relative max-w-6xl mx-auto">
           <div className="glass-card p-6 rounded-2xl shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900"
               alt="IQVest AI Trading Dashboard"
               className="w-full h-auto rounded-xl"
               loading="eager"
-              width="1200"
-              height="800"
+              width="1400"
+              height="900"
             />
           </div>
           {/* Glow effect behind the image */}

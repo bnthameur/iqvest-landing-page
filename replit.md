@@ -45,8 +45,8 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Frontend Components
-- **Navigation**: Clean full-width navigation with backdrop blur effect
-- **Hero Section**: Centered layout with background lighting effects and prominent platform image
+- **Navigation**: Floating glassmorphism navigation with centered positioning and logo integration
+- **Hero Section**: Centered layout with background lighting effects and prominent wider platform image
 - **Features Section**: Grid layout showcasing AI capabilities with icons from Lucide
 - **Trustpilot Section**: 4.9/5 rating display with breakdown bars
 - **Testimonials**: Grid of user reviews with avatars and ratings
