@@ -1,0 +1,75 @@
+1. Color System
+
+Base background: deep almost‑black purple #0B031A → #1A052B (very subtle gradient)
+
+Footer: pure near‑black #050010 (distinctly darker than page)
+
+Accents: neon lilac #8B42FF, hot magenta #FF52E5
+
+Text:
+
+Headings: #FFFFFF
+
+Body: muted lilac #C8BFE7
+
+Cards/Surfaces: rgba(255,255,255,0.04) + backdrop-filter: blur(14px)
+
+2. Navigation Bar
+
+Width: 320 px max, centered horizontally
+
+Background: transparent dark (rgba(11,3,26,0.6)) with backdrop blur
+
+Logo only (no text) left‑aligned inside bar
+
+Padding: 1rem vertical, 2rem horizontal
+
+Border‑radius: 24px
+
+Box‑shadow: 0 4px 24px rgba(0,0,0,0.4)
+
+3. Hero & Parallax
+
+Hero container: fixed height (80vh), position: relative; overflow: hidden;
+
+Background image: absolutely positioned, transform: translateY(0) → on scroll moves up to fill screen (“cover to full‐screen”)
+
+Content block: position: sticky; top: 20px; (so text/buttons stay in view while image scrolls)
+
+Scroll trigger: once image reaches full‐screen reveal next section
+
+4. Plan‑Selection → Checkout Flow
+
+Plan Cards: glassmorphic, hover glow, animated checkmark when selected
+
+On‑select: transition to dedicated “Checkout” page matching chosen plan:
+
+Banner: hero‑style with plan name & pricing cycle (yearly/quarterly/etc.)
+
+Form sections: email input, payment method tabs (Card vs Crypto)
+
+Visual cues: active tab highlighted with neon underline + subtle icon glow
+
+Submit button: full‑width, gradient fill, hover scale + glow
+
+5. Motion & Interactions
+
+Global durations: 180 ms hover, 400 ms scroll reveals, 600 ms page transitions
+
+Scroll reveals: fade‑in + slide‑up (Y: 24 px → 0)
+
+Parallax: image moves at 30% of scroll speed
+
+Tab transitions: fade‑slide between Card/Crypto forms
+
+6. Delivery
+
+Design tokens (JSON or SCSS variables) for colors, typography, spacings
+
+Tailwind config (or CSS variables) implementing tokens
+
+HTML/CSS skeleton (with placeholders) or production‑ready React components
+
+Vanilla JS or React for parallax, sticky hero, plan flow—no heavy frameworks
+
+Optimized assets (SVG icons, WebP/AVIF images) & inline critical CSS for 90+ Lighthouse scores

@@ -3,36 +3,37 @@
 @tailwind utilities;
 
 :root {
-  /* Deep purple dark theme colors */
-  --background: hsl(254, 79%, 15%);
+  /* Deep purple dark theme colors - Updated to darker theme */
+  --background: hsl(254, 85%, 5%);
   --foreground: hsl(0, 0%, 100%);
-  --muted: hsl(254, 30%, 25%);
-  --muted-foreground: hsl(266, 62%, 87%);
-  --popover: hsl(254, 79%, 15%);
+  --muted: hsl(254, 30%, 15%);
+  --muted-foreground: hsl(266, 42%, 78%);
+  --popover: hsl(254, 85%, 5%);
   --popover-foreground: hsl(0, 0%, 100%);
-  --card: hsl(254, 79%, 15%);
+  --card: hsl(254, 85%, 5%);
   --card-foreground: hsl(0, 0%, 100%);
-  --border: hsl(254, 40%, 30%);
-  --input: hsl(254, 40%, 30%);
+  --border: hsl(254, 40%, 20%);
+  --input: hsl(254, 40%, 20%);
   --primary: hsl(265, 100%, 63%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(316, 100%, 66%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(254, 40%, 30%);
+  --accent: hsl(254, 40%, 20%);
   --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --ring: hsl(265, 100%, 63%);
   --radius: 0.75rem;
   
-  /* Custom theme variables */
-  --navy-purple: hsl(254, 79%, 15%);
-  --deep-violet: hsl(276, 76%, 18%);
-  --neon-lilac: hsl(265, 100%, 63%);
-  --hot-magenta: hsl(316, 100%, 66%);
-  --muted-lilac: hsl(266, 62%, 87%);
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Custom theme variables - Updated to darker theme */
+  --navy-purple: hsl(254, 85%, 5%);  /* #0B031A */
+  --deep-violet: hsl(276, 79%, 8%);  /* #1A052B */
+  --footer-bg: hsl(252, 100%, 2%);   /* #050010 */
+  --neon-lilac: hsl(265, 100%, 63%); /* #8B42FF */
+  --hot-magenta: hsl(316, 100%, 66%); /* #FF52E5 */
+  --muted-lilac: hsl(266, 42%, 78%);  /* #C8BFE7 */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.06);
   --glass-hover-border: rgba(139, 66, 255, 0.4);
 }
 
