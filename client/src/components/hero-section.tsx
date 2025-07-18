@@ -59,20 +59,20 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Centered Platform Image - Wider */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="glass-card p-6 rounded-2xl shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900"
-              alt="IQVest AI Trading Dashboard"
-              className="w-full h-auto rounded-xl"
-              loading="eager"
-              width="1400"
-              height="900"
-            />
-          </div>
-          {/* Glow effect behind the image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl transform scale-105 -z-10"></div>
+        {/* Centered Platform Image - Full Width */}
+        <div className="relative w-full max-w-7xl mx-auto">
+          {/* Bright glow effect behind the image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 blur-3xl transform scale-110 -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-2xl transform scale-105 -z-10"></div>
+          
+          <img
+            src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=1000"
+            alt="IQVest AI Trading Dashboard"
+            className="w-full h-auto"
+            loading="eager"
+            width="1600"
+            height="1000"
+          />
         </div>
       </div>
     </section>
