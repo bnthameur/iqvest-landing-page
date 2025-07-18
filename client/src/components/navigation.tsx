@@ -14,39 +14,39 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4">
-      <div className="glass-card rounded-2xl border border-white/10 backdrop-blur-lg">
-        <div className="flex justify-between items-center h-16 px-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="text-2xl font-bold gradient-text">IQVest</div>
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8" role="navigation" aria-label="Main navigation">
+            <div className="flex items-center space-x-8" role="navigation" aria-label="Main navigation">
               <button
                 onClick={() => scrollToSection("features")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-3 py-2"
                 aria-label="Navigate to Features section"
               >
                 Features
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-3 py-2"
                 aria-label="Navigate to Reviews section"
               >
                 Reviews
               </button>
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-3 py-2"
                 aria-label="Navigate to Pricing section"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-3 py-2"
                 aria-label="Navigate to FAQ section"
               >
                 FAQ
@@ -54,7 +54,7 @@ export default function Navigation() {
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="ghost"
               className="text-muted-foreground hover:text-foreground transition-colors duration-200"
@@ -84,32 +84,43 @@ export default function Navigation() {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden glass-card border-t border-white/10 mt-2 rounded-2xl">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-white/10">
           <div className="px-4 pt-4 pb-4 space-y-2">
             <button
               onClick={() => scrollToSection("features")}
-              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
             >
               Features
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
-              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
             >
               Reviews
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
             >
               Pricing
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
             >
               FAQ
             </button>
+            <div className="pt-4 border-t border-white/10">
+              <Button
+                variant="ghost"
+                className="w-full justify-start text-muted-foreground hover:text-foreground mb-2"
+              >
+                Login
+              </Button>
+              <Button className="btn-modern w-full">
+                Get Started
+              </Button>
+            </div>
           </div>
         </div>
       )}
