@@ -1,0 +1,77 @@
+Theme: Deep purple dark‑mode.
+
+Color System:
+
+Background gradient: from #1B0E3F (navy‑purple) to #2D094A (deep violet).
+
+Primary accent: neon lilac #8B42FF.
+
+Secondary accent: hot magenta #FF52E5.
+
+Text palette: pure white #FFFFFF for headings; muted lilac #E0D8F7 for body.
+
+Surface cards: rgba(255,255,255,0.08) with backdrop-filter: blur(12px).
+
+Typography Scale:
+
+H1: Inter Extra‑Bold, 64 px → 48 px → 36 px (responsive)
+
+H2: Inter Semi‑Bold, 32 px → 28 px
+
+Body: Inter Regular, 16 px, line‑height 1.6
+
+Mono/Code: Source Code Pro, 14 px
+
+UI Components:
+
+Buttons & CTAs
+
+Gradient fill (#8B42FF → #FF52E5), border‐radius 12 px, padding 0.75 rem × 1.5 rem
+
+Hover: scale 1.05 + stronger glow (box-shadow: 0 0 20px rgba(139,66,255,0.6))
+
+Cards & Panels
+
+Glassmorphism: background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); border-radius: 16px; padding: 2rem;
+
+Subtle neon border on hover: border: 1px solid rgba(139,66,255,0.4)
+
+Inputs & Forms
+
+Transparent background, 1px neon lilac outline, 8px border‑radius
+
+Focus: outline‑offset 2px, glow box-shadow: 0 0 8px rgba(139,66,255,0.5)
+
+Icons & Illustrations
+
+Line icons with neon lilac fill on hover
+
+Device mockups cast a soft purple glow
+
+Motion & Interactions:
+
+Global timing: 200 ms ease‑in‑out for hovers, 400 ms for scroll reveals
+
+Scroll animations: fade‑in + slide‑up (translateY 20px → 0) when elements enter viewport
+
+Parallax: background gradient shifts ever‑so‑slightly on scroll (use CSS custom property tied to scroll)
+
+Link underlines: animate from left to right, 150 ms
+
+Responsive Breakpoints:
+
+Mobile: up to 640 px—stacked layout, 1‑col cards, reduced padding (1rem)
+
+Tablet: 641–1024 px—2‑col grids, moderate type sizes
+
+Desktop+: 1025 px+—3‑col grids, full type scale, generous whitespace
+
+Deliver:
+
+A design token file (JSON or SCSS variables) defining the above.
+
+HTML/CSS (or Tailwind config) skeleton implementing the style—no demo text, just placeholders for your copy.
+
+Vanilla JS for interactions (no frameworks) or production‑ready React components if preferred.
+
+All assets optimized for 90+ Lighthouse scores (critical CSS, deferred JS, SVG icons, WebP/AVIF).
